@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import CountriesList from './components/CountriesList';
-import CountryDetail from './components/CountryDetail';
+import CountryListWithAxios from './components/CountryListWithAxios';
+import CountryDetailWithAxios from './components/CountryDetailWithAxios';
 import { Route } from 'react-router-dom';
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
       <div className="container">
         <div className="row text-left">
           <div className="col-5 list-container">
-            <CountriesList />
+            <CountryListWithAxios />
           </div>
           <div className="col-7">
-            <Route exact path="/countries/:id" component={CountryDetail} />
+            <Route exact path="/countries/:id" component={CountryDetailWithAxios} />
           </div>
         </div>
       </div>
